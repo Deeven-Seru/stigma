@@ -32,6 +32,13 @@ jobs:
     - name: Make gradlew executable
       run: chmod +x gradlew
     
+    - name: List Gradle projects and tasks
+      run: |
+        echo "=== List all projects ===" 
+        ./gradlew projects
+        echo "=== List all tasks ==="
+        ./gradlew tasks --all
+    
     - name: Create local.properties (optional - build will work without Azure keys)
       run: |
         if [ -n "${{ secrets.AZURE_OPENAI_KEY }}" ]; then
@@ -45,7 +52,7 @@ jobs:
         fi
     
     - name: Build debug APK
-      run: ./gradlew assembleDebug --stacktrace --no-daemon
+      run: ./gradlew :app:assembleDebug --stacktrace --no-daemon
     
     - name: Upload APK
       uses: actions/upload-artifact@v4
