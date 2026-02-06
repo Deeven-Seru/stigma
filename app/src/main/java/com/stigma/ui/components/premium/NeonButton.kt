@@ -79,7 +79,7 @@ fun NeonButton(
                 .clip(RoundedCornerShape(cornerRadius))
                 .background(
                     brush = Brush.linearGradient(
-                        colors = StigmaGradientPurpleBlue.map { 
+                        colors = StigmaGradientPurpleBlueColors.map { 
                             it.copy(alpha = pulseAlpha * glowIntensity) 
                         }
                     )
@@ -92,7 +92,7 @@ fun NeonButton(
                 .clip(RoundedCornerShape(cornerRadius))
                 .background(
                     brush = Brush.linearGradient(
-                        colors = StigmaGradientPurpleBlue
+                        colors = StigmaGradientPurpleBlueColors
                     )
                 )
                 .border(
@@ -146,7 +146,7 @@ fun NeonOutlineButton(
             .border(
                 width = 2.dp,
                 brush = Brush.sweepGradient(
-                    colors = StigmaGradientTriple + StigmaGradientTriple.first(),
+                    colors = StigmaGradientTripleColors + StigmaGradientTripleColors.first(),
                     center = androidx.compose.ui.geometry.Offset(
                         borderOffset * 1000f,
                         borderOffset * 1000f
@@ -209,7 +209,7 @@ fun NeonIconButton(
                 .size(size)
                 .clip(RoundedCornerShape(size / 3))
                 .background(
-                    brush = Brush.linearGradient(StigmaGradientPurpleBlue)
+                    brush = Brush.linearGradient(StigmaGradientPurpleBlueColors)
                 )
                 .clickable(onClick = onClick),
             contentAlignment = Alignment.Center,

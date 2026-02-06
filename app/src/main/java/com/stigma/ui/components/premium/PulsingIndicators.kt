@@ -127,7 +127,7 @@ fun NeonProgressBar(
         if (animatedProgress > 0f) {
             drawRoundRect(
                 brush = androidx.compose.ui.graphics.Brush.horizontalGradient(
-                    colors = StigmaGradientPurpleBlue
+                    colors = StigmaGradientPurpleBlueColors
                 ),
                 size = androidx.compose.ui.geometry.Size(
                     width = width * animatedProgress.coerceIn(0f, 1f),

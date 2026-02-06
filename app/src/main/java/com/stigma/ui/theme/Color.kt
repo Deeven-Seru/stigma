@@ -42,15 +42,20 @@ val StigmaParticlePink = Color(0x60EC4899)
 val StigmaShimmerBase = Color(0x20FFFFFF)
 val StigmaShimmerHighlight = Color(0x40FFFFFF)
 
+// Color Lists for Gradients (for components that need List<Color>)
+val StigmaGradientPurpleBlueColors = listOf(StigmaPrimary, StigmaSecondary)
+val StigmaGradientTripleColors = listOf(StigmaPrimary, StigmaSecondary, StigmaTertiary)
+val StigmaGradientNeonColors = listOf(StigmaNeonPurple, StigmaNeonBlue, StigmaNeonPink)
+
 // Gradient Brushes
 val StigmaGradientPurpleBlue = Brush.linearGradient(
-    colors = listOf(StigmaPrimary, StigmaSecondary)
+    colors = StigmaGradientPurpleBlueColors
 )
 
 val StigmaGradientTriple = Brush.linearGradient(
-    colors = listOf(StigmaPrimary, StigmaSecondary, StigmaTertiary)
+    colors = StigmaGradientTripleColors
 )
 
 val StigmaGradientNeon = Brush.linearGradient(
-    colors = listOf(StigmaNeonPurple, StigmaNeonBlue, StigmaNeonPink)
+    colors = StigmaGradientNeonColors
 )

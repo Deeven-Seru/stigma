@@ -22,7 +22,7 @@ import kotlin.math.sin
 @Composable
 fun AnimatedWave(
     modifier: Modifier = Modifier,
-    waveColor: List<androidx.compose.ui.graphics.Color> = StigmaGradientPurpleBlue,
+    waveColor: List<androidx.compose.ui.graphics.Color> = StigmaGradientPurpleBlueColors,
     waveHeight: Float = 50f,
     waveSpeed: Float = 1f
 ) {
