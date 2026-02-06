@@ -2,7 +2,9 @@ package com.stigma.domain.model
 
 data class Claim(
     val id: String,
-    val text: String,
-    val timestamp: Long,
-    val source: String? = null
+    val title: String,
+    val description: String,
+    val context: String,
+    val createdAt: Long,
+    val status: AnalysisStatus
 )

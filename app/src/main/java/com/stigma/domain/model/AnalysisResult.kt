@@ -1,28 +1,36 @@
 package com.stigma.domain.model
 
 data class AnalysisResult(
-    val id: String,
     val claimId: String,
-    val status: AnalysisStatus,
     val normalizedClaim: NormalizedClaim,
     val parameters: List<AnalysisParameter>,
     val patterns: List<DiscoveredPattern>,
-    val metrics: List<ComparisonMetric>,
-    val scenarios: List<Scenario>,
-    val createdAt: Long,
-    val updatedAt: Long
+    val executiveSummary: String,
+    val stanceFraming: String,
+    val supportingTrends: List<String>,
+    val correlationAnalysis: String,
+    val comparativeMetrics: List<ComparisonMetric>,
+    val scenarioAdvantages: List<Scenario>,
+    val strategicRecommendation: String,
+    val confidenceScore: Float,
+    val limitations: List<String>,
+    val dataSources: List<String>,
+    val completedAt: Long
 )
 
 enum class AnalysisStatus {
     PENDING,
-    PROCESSING,
+    ANALYZING,
     COMPLETED,
     FAILED
 }
 
 data class NormalizedClaim(
-    val text: String,
-    val confidence: Double
+    val decisionObjective: String,
+    val evaluationCriteria: List<String>,
+    val contextAssumptions: List<String>,
+    val timeframe: String,
+    val scope: String
 )
 
 data class AnalysisParameter(
