@@ -18,6 +18,10 @@ class AnalysisRepositoryImpl @Inject constructor(
     private val gson: Gson
 ) : AnalysisRepository {
     
+    /**
+     * Retrieves all analysis results from the local database.
+     * Maps database entities to domain models using Gson for complex type conversion.
+     */
     override fun getAllAnalyses(): Flow<List<AnalysisResult>> {
         return analysisDao.getAllAnalyses().map { entities ->
             entities.map { it.toDomain(gson) }
@@ -41,7 +45,7 @@ class AnalysisRepositoryImpl @Inject constructor(
     }
     
     override suspend fun insertAnalysis(analysis: AnalysisResult) {
-        Timber.d("Inserting analysis for claim: ${analysis.claimId}")
+        Timber.d("Inserting analysis: ${analysis.id} for claim: ${analysis.claimId}")
         analysisDao.insertAnalysis(analysis.toEntity(gson))
     }
     
@@ -59,7 +63,8 @@ class AnalysisRepositoryImpl @Inject constructor(
     }
     
     override suspend fun syncWithRemote() {
-        // TODO: Implement Firestore sync
-        Timber.d("Syncing analyses with remote")
+        // TODO: Implement Firestore sync mechanism
+        // This should eventually fetch from Firestore and reconcile with local Room DB
+        Timber.w("syncWithRemote called but not yet implemented")
     }
 }
