@@ -62,4 +62,11 @@ The project follows [Google's Guide to App Architecture](https://developer.andro
 
 ## ⚖️ License
 
-Private Repository. All rights reserved.
+Copyright © 2026 Deeven Seru. All rights reserved.
+
+This repository contains proprietary source code. Unauthorized copying, distribution, or modification of this file, via any medium, is strictly prohibited.
+
+## 🚫 Contribution
+
+This is an internal repository. Pull requests from external contributors will be automatically closed without review. Internal team members must follow the [Review Process](https://internal.wiki/process) before merging to `main`.
+
