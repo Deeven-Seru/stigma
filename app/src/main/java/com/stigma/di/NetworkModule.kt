@@ -7,7 +7,6 @@ import com.stigma.data.remote.AzureOpenAIApi
 import com.stigma.data.remote.model.AzureOpenAIModel
 import com.stigma.data.remote.provider.AzureOpenAIProvider
 import com.stigma.data.remote.provider.DefaultAzureOpenAIProvider
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
